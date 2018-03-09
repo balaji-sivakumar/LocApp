@@ -636,7 +636,7 @@ dialog.matches('Add Cart', function (session, args, results) {
 	session.userData.itemId = itemId ? itemId.entity : "";
 	session.userData.path = "/v1/items/" + session.userData.itemId + "?apiKey=ve94zk6wmtmkawhde7kvw9b3&format=json"
 	if(itemId){
-	if(session.userData.cartItem.length > 3){
+	if(session.userData.cartItem.length > 999){
 		session.send("Maximum 3 items can be added in cart once");
 		builder.Prompts.choice(session, "Check your cart",['Show cart']);
 		session.endDailog();
